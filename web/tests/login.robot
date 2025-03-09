@@ -7,7 +7,7 @@ Test Setup           Start session
 Test Teardown        Take Screenshot
 
 *** Test Cases ***
-Deve logar como gesto de academia
+Deve logar como gestor de academia
     Go to login page
     Submit login form    sac@smartbit.com    pwd123
 

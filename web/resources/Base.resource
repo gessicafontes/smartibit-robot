@@ -17,6 +17,8 @@ Resource       ./pages/Components/BoxNotice.resource
 Resource       ./pages/Components/Navbar.resource
 Resource       ./pages/Components/Modal.resource
 
+Variables      Env.py
+
 *** Variables ***
 ${ADMIN_EMAIL}    sac@smartbit.com
 ${ADMIN_PASS}     pwd123
@@ -24,8 +26,8 @@ ${ADMIN_PASS}     pwd123
 *** Keywords ***
 
 Start session
-    New Browser    browser=chromium    headless=False
-    New Page    http://localhost:3000
+    New Browser    browser=${BROWSER}    headless=${HEADLESS}
+    New Page    ${BASE_URL}
 
 Get JSON fixture
     [Arguments]        ${file_name}    ${scenario}
